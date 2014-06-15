@@ -30,15 +30,14 @@ public class Movement : MonoBehaviour {
 			fallSpeed = 0.0f;
 			controller.Move (new Vector3(0.0f, 0.001f, 0.0f));
 		}
-
-		else
+		else if(jump < 0.01f)
 		{
 			fallSpeed += 0.01f;
 			fallSpeed *= magnitude;
 			controller.Move (new Vector3(0.0f, -fallSpeed, 0.0f));
 		}
 		
-		if(Input.GetButton("Jump") && fallSpeed < 0.01f)
+		if(Input.GetButton("Jump") && controller.isGrounded)
 		{
 			jump = jumpHeight;
 			fallSpeed = 0.0f;
@@ -46,8 +45,9 @@ public class Movement : MonoBehaviour {
 		
 		if(jump > 0.0f)
 		{
-			controller.Move (new Vector3( 0.0f, jump, 0.0f));
-			jump = (jump / 1.3f) - 0.01f;
+			float subjump = (jump / 8.8f) + 0.01f;
+			controller.Move (new Vector3( 0.0f, subjump, 0.0f));
+			jump = jump - (jump / 8.8f) - 0.01f;
 		}
 		
 		if(transform.position.y <= -120.0f)

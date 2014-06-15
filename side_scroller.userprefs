@@ -1,14 +1,15 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CubeGravity.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\HeightDisplay.cs">
     <Files>
+      <File FileName="Assets\Scripts\HeightDisplay.cs" Line="15" Column="28" />
+      <File FileName="Assets\Scripts\CubeGravity.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\TerrainGenerator.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\DisplayOver.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\CameraMovement.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Movement.cs" Line="56" Column="11" />
-      <File FileName="Assets\Scripts\TerrainGenerator.cs" Line="45" Column="3" />
+      <File FileName="Assets\Scripts\Movement.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\PointMessage.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PointKeeper.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\CubeGravity.cs" Line="27" Column="18" />
+      <File FileName="Assets\Scripts\PointKeeper.cs" Line="20" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

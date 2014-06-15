@@ -52,11 +52,13 @@
      <Compile Include="Assets\Scripts\DisplayOver.cs" />
      <Compile Include="Assets\Scripts\Dropoff.cs" />
      <Compile Include="Assets\Scripts\DynamicLighting.cs" />
+     <Compile Include="Assets\Scripts\HeightDisplay.cs" />
      <Compile Include="Assets\Scripts\MouseClickTemporary.cs" />
      <Compile Include="Assets\Scripts\Movement.cs" />
      <Compile Include="Assets\Scripts\PointKeeper.cs" />
      <Compile Include="Assets\Scripts\PointMessage.cs" />
      <Compile Include="Assets\Scripts\TerrainGenerator.cs" />
+     <None Include="Assets\Shaders\3Dtext.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
