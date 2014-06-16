@@ -12,11 +12,13 @@ public class Movement : MonoBehaviour {
 	
 	float jump;
 	float fallSpeed; // Speed at which the object is falling.
+	bool isGrounded;
 	CharacterController controller;
 	
 	
 	void Start () 
 	{
+		isGrounded = false;
 		float jump = 0.0f;
 		fallSpeed = 0.0f;
 		controller = this.gameObject.GetComponent<CharacterController>();
@@ -25,10 +27,10 @@ public class Movement : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () 
 	{
-		if(controller.isGrounded)
+		if(controller.isGrounded || isGrounded)
 		{
 			fallSpeed = 0.0f;
-			controller.Move (new Vector3(0.0f, 0.001f, 0.0f));
+			controller.Move (new Vector3(0.0f, 0.0f, 0.0f));
 		}
 		else if(jump < 0.01f)
 		{
@@ -55,5 +57,16 @@ public class Movement : MonoBehaviour {
 			pointKeeper.SendMessage("EndGame");
 			Destroy(this.gameObject);
 		}
+	}
+
+	void OnCollisionEnter(Collision collision)
+	{
+		Debug.Log ("hello");
+		isGrounded = true;
+	}
+
+	void OnCollisionExit(Collision collision)
+	{
+		isGrounded = false;
 	}
 }

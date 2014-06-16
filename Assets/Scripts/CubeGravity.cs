@@ -14,17 +14,18 @@ public class CubeGravity : MonoBehaviour {
 		neverGrounded = true;
 		acceleration = 1.0f/Random.Range (25,75) + 0.25f;
 		fallSpeed = 0.1f;
-		controller = this.gameObject.GetComponent<CharacterController>();
+		//controller = this.gameObject.GetComponent<CharacterController>();
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () 
+	/*void FixedUpdate () 
 	{
 		if(neverGrounded)
 		{
 			fallSpeed = acceleration;
-			controller.Move (new Vector3(0.0f, fallSpeed, 0.0f));
+			//controller.Move (new Vector3(0.0f, fallSpeed, 0.0f));
+			//transform.position.y = transform.position.y + fallSpeed;
+			transform.position = new Vector3(transform.position.x, transform.position.y+fallSpeed, transform.position.z);
 		}
-	}
-
+	}*/
 }

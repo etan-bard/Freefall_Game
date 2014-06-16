@@ -42,15 +42,15 @@ public class CameraMovement : MonoBehaviour {
 			
 		if(Input.GetButton("Right") && moveDecay.x < maxSpeed)
 		{
-			moveDecay += new Vector3(0.02f, 0.0f, 0.0f);
+			moveDecay += new Vector3(0.03f, 0.0f, 0.0f);
 		}
 		else if(Input.GetButton("Left") && moveDecay.x > -maxSpeed)
 		{
-			moveDecay -= new Vector3(0.02f,0.0f,0.0f);
+			moveDecay -= new Vector3(0.03f,0.0f,0.0f);
 		}
 		else
 		{
-			moveDecay = moveDecay/1.2f;
+			moveDecay = moveDecay/2.2f;
 		}
 	}	
 }

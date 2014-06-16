@@ -12,6 +12,6 @@ public class HeightDisplay : MonoBehaviour
 	void LateUpdate()
 	{
 		TextMesh t = (TextMesh)gameObject.GetComponent(typeof(TextMesh));
-		t.text = Mathf.RoundToInt((transform.position.y + 120)) + "";
+		t.text = Mathf.RoundToInt((transform.position.y + 120)) + "m";
 	}
 }
