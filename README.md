@@ -1,4 +1,3 @@
-side_scroller
-=============
+Breakfall
 
-A side scroller game.
+A proof of concept game in development using Unity. This project is ongoing.
